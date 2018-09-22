@@ -149,6 +149,10 @@ extension ViewController {
         let ellipseFillAction = UIAlertAction(title: "Ellipse(Fill)", style: .default) { _ in
             self.sketchView.drawTool = .ellipseFill
         }
+		// Kinoko
+		let kinokoAction = UIAlertAction(title: "Kinoko", style: .default) { _ in
+			self.sketchView.drawTool = .kinoko
+		}
         // Cancel
         let cancelAction = UIAlertAction(title: "Cancel", style: .default) { _ in }
 
@@ -158,7 +162,8 @@ extension ViewController {
         alertController.addAction(rectAction)
         alertController.addAction(rectFillAction)
         alertController.addAction(ellipseAction)
-        alertController.addAction(ellipseFillAction)
+		alertController.addAction(ellipseFillAction)
+		alertController.addAction(kinokoAction)
         alertController.addAction(cancelAction)
 
         present(alertController, animated: true, completion: nil)
